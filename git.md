@@ -1,4 +1,6 @@
 # edit the root commit in git
+
+- ### method1
 >
 ```bash
 # checkout the root commit
@@ -11,4 +13,9 @@ git commit --amend
 git rebase --onto HEAD HEAD master  
 
 git rebase --onto <newbase> <since>...<till>
+```
+
+- ### method2
+```bash
+git rebase -i --root
 ```
