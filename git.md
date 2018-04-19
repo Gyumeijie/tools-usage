@@ -43,3 +43,14 @@ git branch -m <oldname> <newname>
 git branch -m <newname>
 ```
 > A way to remember this, is -m is for "move" (or mv), which is how you rename files.
+
+# multi users
+given an scenario where we have local git configured with:
+ ```bash
+ git config --global user.email user2@example.com
+ ```
+and when we wanna push the master branch to the remote, we then use **user1 account**, so each of these commits will have a tip which takes the form of: 
+``` 
+user1 authored and user2 committed 
+```
+
