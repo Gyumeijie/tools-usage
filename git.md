@@ -30,3 +30,16 @@ git rm --cached -r .
 ```
 > the option -r means allowing  recursive removal when a leading directory-name is given, another useful option is
 --dry-run which means not actually removing the files, just show if they exist in the index.
+
+
+# rename a local branch
+
+- ### rename a branch while pointed to any branch, do:
+```bash
+git branch -m <oldname> <newname>
+```
+- ###  rename the current branch, you can do:
+```bash
+git branch -m <newname>
+```
+> A way to remember this, is -m is for "move" (or mv), which is how you rename files.
