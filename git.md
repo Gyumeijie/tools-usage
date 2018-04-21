@@ -53,4 +53,7 @@ and when we wanna push the master branch to the remote, we then use **user1 acco
 ``` 
 user1 authored and user2 committed 
 ```
-
+otherwise, if the author is just the user who commit, we would have a tip like this:
+```
+user1 authored and user1 committed 
+```
