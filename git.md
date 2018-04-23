@@ -42,6 +42,14 @@ git branch -m <oldname> <newname>
 ```bash
 git branch -m <newname>
 ```
+- ### rename the current branch to an existing branch, you can do:
+```bash
+git branch -M <newname>
+```
+given two branches named ***master*** and ***tmp***, and we are now in ***tmp*** branch, if we 
+execute the command ```git branch -M master```, then the ***tmp*** becomes ***master***, and the old
+***master*** branch is deleted.
+
 > A way to remember this, is -m is for "move" (or mv), which is how you rename files.
 
 # multi users
