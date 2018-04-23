@@ -65,3 +65,14 @@ otherwise, if the author is just the user who commit, we would have a tip like t
 ```
 user1 authored and user1 committed 
 ```
+
+# cherry-pick a range of commits
+given a commits sequence of A, B, C, D and E, if we execute the following command, then the commit B and C 
+will be applied to the current branch, and the commit A is exclusive.
+```bash
+  git cherry-pick A..C 
+```
+if we wanna have commit A be inclusive, we can write this:
+```bash
+  git cherry-pick A^..C 
+```
