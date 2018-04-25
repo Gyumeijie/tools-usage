@@ -120,3 +120,7 @@ search the web for Sublime Text Package Manager, and you will find something nam
 2. type install package
 3. then type the package name you want to install
 ```
+
+# Resource Links
+
+- [Sublime Text Tutorial](https://www.youtube.com/watch?v=MeOaWR2T6TU)
