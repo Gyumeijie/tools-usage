@@ -76,3 +76,14 @@ if we wanna have commit A be inclusive, we can write this:
 ```bash
   git cherry-pick A^..C 
 ```
+# keep, but not track, a file
+A common developer problem: the version that the developer works with locally may be customized in ways that are not 
+intended to be visible upstream.
+```bash
+git update-index --assume-unchanged thefile
+```
+When you want to make a published change to the file, you can proceed via:
+```bash
+git update-index --no-assume-unchanged thefile
+git add -p thefile
+```
