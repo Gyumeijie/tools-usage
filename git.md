@@ -30,7 +30,10 @@ git rm --cached -r .
 ```
 > the option -r means allowing  recursive removal when a leading directory-name is given, another useful option is
 --dry-run which means not actually removing the files, just show if they exist in the index.
-
+3. ### clean the untracked files or directories
+```bash
+git clean -ffdx [--dry-run]
+```
 
 # rename a local branch
 
