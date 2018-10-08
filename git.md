@@ -69,6 +69,14 @@ otherwise, if the author is just the user who commit, we would have a tip like t
 user1 authored and user1 committed 
 ```
 
+# ERROR: Permission to User1/repo.git denied to User2
+1. Run `ssh -vT git@github.com` to check which private key is being used
+2. If it is the User2's, try add the following configuration to `~/.ssh/config`
+```
+Host github.com
+  IdentityFile /path/to/your_ssh_id_rsa
+```
+
 # cherry-pick a range of commits
 given a commits sequence of A, B, C, D and E, if we execute the following command, then the commit B and C 
 will be applied to the current branch, and the commit A is exclusive.
