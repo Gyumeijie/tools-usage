@@ -1,6 +1,6 @@
-# edit the root commit in git
+### Edit the root commit in git
 
-- ### method1
+- #### Method1
 ```bash
 # checkout the root commit
 git checkout <sha1-of-root>
@@ -13,39 +13,39 @@ git rebase --onto HEAD HEAD master
 
 git rebase --onto <newbase> <since>...<till>
 ```
-- ### method2
+- #### Method2
 ```bash
 git rebase -i --root
 ```
 
-# create a new empty branch
+### Create a new empty branch
 
-1. ### create a branch as an orphan:
+1. #### Create a branch as an orphan:
 ```bash
 git checkout --orphan <branchname>
 ```
-2. ### clear the working directory
+2. #### Clear the working directory
 ```bash
 git rm --cached -r .
 ```
 > the option -r means allowing  recursive removal when a leading directory-name is given, another useful option is
 --dry-run which means not actually removing the files, just show if they exist in the index.
-3. ### clean the untracked files or directories
+3. #### Clean the untracked files or directories
 ```bash
 git clean -ffdx [--dry-run]
 ```
 
-# rename a local branch
+### Rename a local branch
 
-- ### rename a branch while pointed to any branch, do:
+- #### Rename a branch while pointed to any branch, do:
 ```bash
 git branch -m <oldname> <newname>
 ```
-- ###  rename the current branch, you can do:
+- #### Rename the current branch, you can do:
 ```bash
 git branch -m <newname>
 ```
-- ### rename the current branch to an existing branch, you can do:
+- #### Rename the current branch to an existing branch, you can do:
 ```bash
 git branch -M <newname>
 ```
@@ -55,7 +55,7 @@ execute the command ```git branch -M master```, then the ***tmp*** becomes ***ma
 
 > A way to remember this, is -m is for "move" (or mv), which is how you rename files.
 
-# multi users
+### Multiple users
 given an scenario where we have local git configured with:
  ```bash
  git config --global user.email user2@example.com
@@ -69,7 +69,7 @@ otherwise, if the author is just the user who commit, we would have a tip like t
 user1 authored and user1 committed 
 ```
 
-# ERROR: Permission to User1/repo.git denied to User2
+### Permission to User1/repo.git denied to User2
 1. Run `ssh -vT git@github.com` to check which private key is being used
 2. If it is the User2's, try add the following configuration to `~/.ssh/config`
 ```
@@ -77,7 +77,7 @@ Host github.com
   IdentityFile /path/to/your_ssh_id_rsa
 ```
 
-# cherry-pick a range of commits
+### Cherry-pick a range of commits
 given a commits sequence of A, B, C, D and E, if we execute the following command, then the commit B and C 
 will be applied to the current branch, and the commit A is exclusive.
 ```bash
@@ -87,7 +87,7 @@ if we wanna have commit A be inclusive, we can write this:
 ```bash
   git cherry-pick A^..C 
 ```
-# keep, but not track, a file
+### Keep, but not track, a file
 A common developer problem: the version that the developer works with locally may be customized in ways that are not 
 intended to be visible upstream.
 ```bash
