@@ -98,3 +98,12 @@ When you want to make a published change to the file, you can proceed via:
 git update-index --no-assume-unchanged thefile
 git add -p thefile
 ```
+
+### Relative Commmit Names
+Git also provides mechanisms for identifying a commit relative to another reference, commonly the tip of a branch.
+
+- The caret (^)
+Within a single generation, the caret is used to select a different parent.
+> For a commit can have multiple parent commits.
+- The tilde (~)
+The tilde is used to go back before an ancestral parent and select a preceding generation.
