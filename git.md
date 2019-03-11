@@ -1,4 +1,4 @@
-### Edit the root commit in git
+### #1 Edit the root commit in git
 
 - #### Method1
 ```bash
@@ -18,7 +18,7 @@ git rebase --onto <newbase> <since>...<till>
 git rebase -i --root
 ```
 
-### Create a new empty branch
+### #2 Create a new empty branch
 
 1. #### Create a branch as an orphan:
 ```bash
@@ -35,7 +35,7 @@ git rm --cached -r .
 git clean -ffdx [--dry-run]
 ```
 
-### Rename a local branch
+### #3 Rename a local branch
 
 - #### Rename a branch while pointed to any branch, do:
 ```bash
@@ -55,7 +55,7 @@ execute the command ```git branch -M master```, then the ***tmp*** becomes ***ma
 
 > A way to remember this, is -m is for "move" (or mv), which is how you rename files.
 
-### Multiple users
+### #4 Multiple users
 given an scenario where we have local git configured with:
  ```bash
  git config --global user.email user2@example.com
@@ -69,7 +69,7 @@ otherwise, if the author is just the user who commit, we would have a tip like t
 user1 authored and user1 committed 
 ```
 
-### Permission to User1/repo.git denied to User2
+### #5 Permission to User1/repo.git denied to User2
 1. Run `ssh -vT git@github.com` to check which private key is being used
 2. If it is the User2's, try add the following configuration to `~/.ssh/config`
 ```
@@ -77,7 +77,7 @@ Host github.com
   IdentityFile /path/to/your_ssh_id_rsa
 ```
 
-### Cherry-pick a range of commits
+### #6 Cherry-pick a range of commits
 given a commits sequence of A, B, C, D and E, if we execute the following command, then the commit B and C 
 will be applied to the current branch, and the commit A is exclusive.
 ```bash
@@ -87,7 +87,7 @@ if we wanna have commit A be inclusive, we can write this:
 ```bash
   git cherry-pick A^..C 
 ```
-### Keep, but not track, a file
+### #7 Keep, but not track, a file
 A common developer problem: the version that the developer works with locally may be customized in ways that are not 
 intended to be visible upstream.
 ```bash
@@ -99,7 +99,7 @@ git update-index --no-assume-unchanged thefile
 git add -p thefile
 ```
 
-### Relative Commmit Names
+### #8 Relative Commmit Names
 Git also provides mechanisms for identifying a commit relative to another reference, commonly the tip of a branch.
 
 - The caret (^)
@@ -109,7 +109,7 @@ Within a single generation, the caret is used to select a different parent.
 The tilde is used to go back before an ancestral parent and select a preceding generation.
 
 
-### Diff the same file between two different commits
+### #9 Diff the same file between two different commits
 ```bash
 git diff [--options] <commit> <commit> [--] [<path>...]
 ```
