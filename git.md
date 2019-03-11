@@ -107,3 +107,10 @@ Within a single generation, the caret is used to select a different parent.
 > For a commit can have multiple parent commits.
 - The tilde (~)
 The tilde is used to go back before an ancestral parent and select a preceding generation.
+
+
+### Diff the same file between two different commits
+```bash
+git diff [--options] <commit> <commit> [--] [<path>...]
+```
+> Note that the \<path\> is not exact the path of the file on your local system. 
