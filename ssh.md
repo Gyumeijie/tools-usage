@@ -78,3 +78,9 @@ Identity added: /Users/yumeijie/.ssh/id_rsa (/Users/yumeijie/.ssh/id_rsa)
 ```bash
 $ ssh -T git@github.com
 ```
+## Remove the passphrase from the key and use it unencrypted
+> For example: travis-ci requires 'enter passphrase for /home/travis/.ssh/id_rsa'
+
+```bash
+$ ssh-keygen -p -P "old_passphrase" -N "" -f ~/.ssh/id_rsa
+```
