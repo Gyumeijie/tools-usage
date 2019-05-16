@@ -114,3 +114,8 @@ The tilde is used to go back before an ancestral parent and select a preceding g
 git diff [--options] <commit> <commit> [--] [<path>...]
 ```
 > Note that the \<path\> is not exact the path of the file on your local system. 
+
+### #10 Push all branch to remote
+```
+$ git push --all origin
+```
