@@ -119,3 +119,9 @@ git diff [--options] <commit> <commit> [--] [<path>...]
 ```
 $ git push --all origin
 ```
+
+### #11 any level of Wildcard to match any level of subdirectories:
+With version 1.8.2 of git, you can also use the `**` wildcard to match any level of subdirectories:
+```bash
+**/__pycache__
+```
