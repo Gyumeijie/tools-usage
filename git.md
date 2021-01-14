@@ -129,4 +129,6 @@ With version 1.8.2 of git, you can also use the `**` wildcard to match any level
 ### #12 checkout file from specific stash
 ```
 git checkout stash@{0} -- `find . -name filename`
+
+git stash show -p stash@{0} --name-only
 ```
