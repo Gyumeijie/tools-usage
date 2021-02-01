@@ -132,3 +132,8 @@ git checkout stash@{0} -- `find . -name filename`
 
 git stash show -p stash@{0} --name-only
 ```
+
+### #13 rollback for not staged
+```
+git diff --name-only | xargs git checkout --
+```
