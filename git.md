@@ -137,3 +137,27 @@ git stash show -p stash@{0} --name-only
 ```
 git diff --name-only | xargs git checkout --
 ```
+
+### #14 new-old 
+
+```
+DIR_PATH=$(pwd)"/new-old"
+tmp_name=".difffiles"
+
+if [ $# -ne 0 ];then
+    DIR_PATH = $1;
+fi
+mkdir $DIR_PATH
+mkdir -p $DIR_PATH"/new"
+mkdir -p $DIR_PATH"/old"
+
+git diff --cached --name-only > $tmp_name
+
+git stash
+cp --parents $(<$tmp_name) $DIR_PATH"/old"
+
+git stash pop
+cp --parents $(<$tmp_name) $DIR_PATH"/new"
+
+rm -f $tmp_name
+```
