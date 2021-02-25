@@ -161,3 +161,12 @@ cp --parents $(<$tmp_name) $DIR_PATH"/new"
 
 rm -f $tmp_name
 ```
+
+### #15 switch between branch
+
+```
+# current in master, and switch to branch_one
+git checkout branch_one
+# switch back to master
+git checkout -
+```
