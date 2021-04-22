@@ -170,3 +170,9 @@ git checkout branch_one
 # switch back to master
 git checkout -
 ```
+
+### #16 get head of specific branch
+
+```
+git rev-parse branch-name
+```
