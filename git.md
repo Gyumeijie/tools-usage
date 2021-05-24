@@ -127,20 +127,20 @@ With version 1.8.2 of git, you can also use the `**` wildcard to match any level
 ```
 
 ### #12 checkout file from specific stash
-```
+```bash
 git checkout stash@{0} -- `find . -name filename`
 
 git stash show -p stash@{0} --name-only
 ```
 
 ### #13 rollback for not staged
-```
+```bash
 git diff --name-only | xargs git checkout --
 ```
 
 ### #14 new-old 
 
-```
+```bash
 DIR_PATH=$(pwd)"/new-old"
 tmp_name=".difffiles"
 
@@ -164,7 +164,7 @@ rm -f $tmp_name
 
 ### #15 switch between branch
 
-```
+```bash
 # current in master, and switch to branch_one
 git checkout branch_one
 # switch back to master
@@ -173,6 +173,12 @@ git checkout -
 
 ### #16 get head of specific branch
 
-```
+```bash
 git rev-parse branch-name
+```
+
+### #17 get modified files in a commit
+
+```bash
+git diff-tree --no-commit-id --name-only -r xxx
 ```
