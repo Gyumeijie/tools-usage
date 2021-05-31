@@ -182,3 +182,13 @@ git rev-parse branch-name
 ```bash
 git diff-tree --no-commit-id --name-only -r xxx
 ```
+
+
+### #18 add local repo as remote
+
+```bash
+ git remote add trunk /usr1/y00520193/project/trunk/xxx/.git
+ 
+ git fetch trunk sync
+ git checkout sync
+```
