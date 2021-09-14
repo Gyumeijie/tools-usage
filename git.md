@@ -192,3 +192,20 @@ git diff-tree --no-commit-id --name-only -r xxx
  git fetch trunk sync
  git checkout sync
 ```
+
+### #19 checkout out remote branch
+> 1. git branch -a (all); 2. git branch(local)
+```bash
+# remote branch
+git branch -r
+
+m/OpenHarmony-2.2-Beta2 -> origin/OpenHarmony-2.2-Beta2
+origin/OpenHarmony-2.2-Beta2
+origin/OpenHarmony-2.3-Beta
+origin/OpenHarmony-v2.2-Beta
+origin/backup/master
+origin/master
+origin/master_dy
+
+git checkout origin/master
+```
