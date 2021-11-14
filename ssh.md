@@ -70,6 +70,7 @@ Identity added: /Users/yumeijie/.ssh/id_rsa (/Users/yumeijie/.ssh/id_rsa)
 ```
 
 3. Check if the key is added
+> ssh-add ~/.ssh/id_rsa
 ```bash
  ssh-add -L
 ```
