@@ -209,3 +209,16 @@ origin/master_dy
 
 git checkout origin/master
 ```
+
+### #20 fetch a remote PR 
+```bash
+git fetch origin pull/$ID/head:$BRANCHNAME
+```
+
+where `$ID` is the pull request id and `$BRANCHNAME` is the name of the new branch that you want to create.
+For instance, let's imagine you want to checkout pull request #2 from the origin main branch:
+```bash
+git fetch origin pull/2/head:MASTER
+
+git fetch git@gitee.com:openharmony/utils_native.git pull/38/head:pr_38
+```
