@@ -222,3 +222,8 @@ git fetch origin pull/2/head:MASTER
 
 git fetch git@gitee.com:openharmony/utils_native.git pull/38/head:pr_38
 ```
+
+> fetch a remote patch set
+```bash
+git fetch https://gerrit.googlesource.com/gerrit refs/changes/03/64403/2 && git checkout FETCH_HEAD
+```
