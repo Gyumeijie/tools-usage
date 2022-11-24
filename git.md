@@ -228,7 +228,7 @@ git fetch git@gitee.com:openharmony/utils_native.git pull/38/head:pr_38
 git fetch https://gerrit.googlesource.com/gerrit refs/changes/03/64403/2 && git checkout FETCH_HEAD
 ```
 
-### #30 patch failed
+### #21 patch failed
 ```
 $ git apply ../../patch.diff
 error: patch failed: xxx:302
