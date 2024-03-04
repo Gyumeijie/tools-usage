@@ -238,3 +238,8 @@ error:xxx: patch does not apply
 ```
 $ git apply ../../patch.diff --reject
 ```
+
+### #22 ignore previous resolved history
+```
+rm -rf .git/rr-cached
+```
